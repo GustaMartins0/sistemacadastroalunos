@@ -15,7 +15,6 @@ class SistemaAlunos:
         self.root.title("Sistema de Cadastro e Relatórios de Alunos")
         self.root.configure(bg='#f0f0f0')
         
-        # Configurar estilo simples
         self.style = ttk.Style()
         self.style.theme_use('clam')
         self._configurar_estilos()
@@ -35,7 +34,6 @@ class SistemaAlunos:
         self.style.configure('Treeview', font=('Segoe UI', 9), rowheight=25)
         self.style.configure('Treeview.Heading', font=('Segoe UI', 9, 'bold'), background='#e0e0e0', foreground='black')
         
-        # Apenas os botões essenciais com cor
         self.style.configure('Success.TButton', background='#27ae60', foreground='white')
         self.style.map('Success.TButton', 
                       background=[('active', '#219653')])
@@ -81,10 +79,8 @@ class SistemaAlunos:
                                  command=self.cadastrar_aluno, style='Success.TButton')
         btn_cadastrar.grid(row=0, column=4, rowspan=2, padx=(20, 0), pady=5, sticky="ns")
 
-        # Configurar pesos das colunas para responsividade
         frm_cadastro.columnconfigure(1, weight=1)
 
-        # Frame de ações
         frm_acoes = ttk.Frame(main_container, padding=15)
         frm_acoes.pack(fill="x", pady=(0, 15))
 
@@ -116,11 +112,9 @@ class SistemaAlunos:
                                command=self.excluir_aluno, style='Danger.TButton')
         btn_excluir.grid(row=1, column=3, padx=5, pady=(10, 0))
 
-        # Frame da tabela
         frm_tabela = ttk.Frame(main_container)
         frm_tabela.pack(fill="both", expand=True)
 
-        # Tabela com scrollbars
         table_frame = ttk.Frame(frm_tabela)
         table_frame.pack(fill="both", expand=True, padx=5, pady=5)
 
