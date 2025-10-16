@@ -11,7 +11,6 @@ Funcionalidades
 - Exportar relatório filtrado para CSV
 
 Como executar
-1. Instale Python 3.8+ e pip.
-2. Instale a dependência:
+1. Instale a dependência:
 
 pip install pandas
